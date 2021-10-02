@@ -22,7 +22,7 @@ class Mercado_libre_Test(unittest.TestCase):
 
         """)
         options = webdriver.ChromeOptions()
-        options.binary_location = '/usr/bin/brave-browser'
+        options.binary_location = '/usr/bin/google-chrome'
         self.driver = webdriver.Chrome(
             executable_path='/usr/bin/chromedriver', options=options)
         driver = self.driver
@@ -32,15 +32,16 @@ class Mercado_libre_Test(unittest.TestCase):
     
     def test_search_ps4(self):
         """
-        Esta Funcion hace una busqueda en Mercado Libre Colombia y establece como ubicacion Bogota
-        Filtra los productos nuevos y los ordena de mayor precio a menor precio
+        Esta Funcion hace una busqueda en http://amazon.com.mx/  , cuenta e imprime todos los productos en la primera pagina
+        de resultados de la busqueda Pantallas       
 
         """
+        f=open('Productos.txt','w')
 
         driver=self.driver
         search_field=driver.find_element_by_id('twotabsearchtextbox')
         search_field.clear()
-        search_field.send_keys('Pantallas')
+        search_field.send_keys('pantallas')
         search_field.submit()
         sleep(3)
         WebDriverWait(driver, 10).until(
@@ -49,8 +50,14 @@ class Mercado_libre_Test(unittest.TestCase):
         print(len(products_list))
         nombre_productos=[ i.text for i in products_list ]
         for i in range(len(nombre_productos)):
-            print(nombre_productos[i],sep='\n')
-            print()
+            f.write('\n######################################\n')            
+            f.write(nombre_productos[i])
+            f.write('\n######################################\n')
+        f.close()
+
+        productos= open('Productos.txt','r').read()
+        print(productos)
+        f.close()
 
 
 
@@ -59,7 +66,7 @@ class Mercado_libre_Test(unittest.TestCase):
     
 
     def tearDown(self):
-        pass
+        self.driver.close()
 
 if __name__ == "__main__":
     unittest.main(verbosity=3, testRunner=HTMLTestRunner(
