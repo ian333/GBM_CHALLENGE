@@ -11,7 +11,7 @@ def main():
     """
     test_number = 0
     while test_number != "":
-        initial_text = "\n\nBienvenido a los ejercicios del GBM Challenge 😄✌️ \n por favor ingrese el numero del test que desea iniciar \n "
+        initial_text = "Bienvenido a los ejercicios del GBM Challenge 😄✌️ \n por favor ingrese el numero del test que desea iniciar \n "
         menu_test = "1: Calcula el Factorial de un numero 🤓\n 2: Buscar 🔍 si un array contiene ciertos elementos \n 3: Hacer la sumatoria ➕ de una lista predefinida\n "
         menu_test_2 = "4: Calcula el Modulo de dos numeros \n 5: Calcula los dias en un mes 📆\n "
         exit_text = "\nSi quiere salir del menu simplemente presione ENTER\n"
@@ -29,7 +29,7 @@ def main():
             suma()
         elif test_number == '4':
             a = int(
-                input("Ingrese los dos numeros a los cuales se le extraera el modulo: "))
+                input("Ingrese el divisor: "))
             b = int(input("Ingrese el dividendo:"))
             module(a, b)
         elif test_number == '5':

@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
+from time import sleep
 
 
 
@@ -44,6 +45,7 @@ class Amazon_Test(unittest.TestCase):
             f.write('\n######################################\n')
         f.close()
 
+        
         productos= open('Productos.txt','r').read()
         print(productos)
         f.close()
