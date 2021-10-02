@@ -1,10 +1,6 @@
-from time import sleep
 import unittest
 from pyunitreport import HTMLTestRunner
 from selenium import webdriver
-from selenium.webdriver.common import by
-from urllib3.packages.six import assertCountEqual
-from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -12,15 +8,8 @@ from selenium.webdriver.common.by import By
 
 
 
-class Mercado_libre_Test(unittest.TestCase):
+class Amazon_Test(unittest.TestCase):
     def setUp(self):
-        print("""
- 
-        This test script makes a search in Mercado Libre Colombia for a Playstation 3
-        and stablish the locacion in bogota then filter by new products
-         and finally sets the view from the lower price to the higher price
-
-        """)
         options = webdriver.ChromeOptions()
         options.binary_location = '/usr/bin/google-chrome'
         self.driver = webdriver.Chrome(
@@ -30,7 +19,7 @@ class Mercado_libre_Test(unittest.TestCase):
         driver.maximize_window()
         driver.implicitly_wait(15)
     
-    def test_search_ps4(self):
+    def test_search_paantallas(self):
         """
         Esta Funcion hace una busqueda en http://amazon.com.mx/  , cuenta e imprime todos los productos en la primera pagina
         de resultados de la busqueda Pantallas       
