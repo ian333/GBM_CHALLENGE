@@ -1,24 +1,21 @@
-
 ![alt text](https://gbm.com/wp-content/uploads//2021/05/GBM.svg)
 # GBM CHALLENGE
-GBM Challenge Prueba Tecnica
-# 1. Perform the following exercises in the language of your choice or in pseudocode:
+GBM Challenge Prueba Técnica
+# 1. Realice los siguientes ejercicios en el lenguaje de su preferencia.
 
-1. Calculate the factorial of a number
+1. Calcula el factorial de un numero
 
-2. From the following array ['a''b''c''d'], validate if it contains the following values: 'a' 'b' 'f'. Return a Boolean depending on the result
+2. De la siguiente lista ['a''b''c''d'], valida si contiene los siguientes valores en ella: 'a' 'b' 'f'. regresa un valor booleano dependiendo del resultado
 
-3. Sum all the elements of an array: [1,34,56,72,123]
+3. Suma todos los elementos de la siguiente lista: [1,34,56,72,123]
 
-4. Write a program to calculate the modules of two numbers without using any inbuilt modulus operator
+4. Escriba un programa para calcular el modulo de 2 numeros sin usar ningun operador o funcion que venga precargada con Python.
 
 5. Write a program to find the number of days in a month
 
  
 
-# 2. In Gherkin language, describe a test case to acquire a product online, beggining with the choice until the purchase
-
- 
+# 2. En lenguaje gherkin ,describa un Test case para adquirir un producto online, desde la eleccion hasta la compra.
 
 # 3. Explica las siguientes lineas de Codigo:
 ```cs
@@ -36,16 +33,16 @@ driver.findElement(By.id(“last_name”)).sendKeys(“Hi”);
 
  
 
-# 4. Design a script with selenium commands (not is necessary use some language programming)
+# 4.Diseña un Script con comandos de selenium que haga lo siguiente:
 
-Open browser
+1. Abrir el explorador 
 
-Go to Amazon page
+2. Ir a la pagina de Amazon 
 
-Find  the word “pantallas”
+3. Busca la palabra "Pantallas"
 
-Extract the number of result on the first screen
+4. Extrae el numero de resultados que te aparecen en la primer pagina
 
  
 
-# 5. Design a high level architecture script using POM
+# 5. Diseñe un programa con una arquitecturqa de alto nivel utilizando POM.
